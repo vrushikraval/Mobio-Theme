@@ -1,101 +1,46 @@
-<p align="center">
-    <a href="https://sylius.com" target="_blank">
-        <img src="https://demo.sylius.com/assets/shop/img/logo.png" />
-    </a>
-</p>
+# SyliusMobioTheme
+SyliusMobioTheme - provide a built version of the mobio theme for the sylius store
 
-<h1 align="center">Sylius Standard Edition</h1>
 
-<p align="center">This is Sylius Standard Edition repository for starting new projects.</p>
+## Running in docker
 
-## About
+docker pull composer
 
-Sylius is the first decoupled eCommerce framework based on [**Symfony**](http://symfony.com) and [**Doctrine**](http://doctrine-project.org). 
-The highest quality of code, strong testing culture, built-in Agile (BDD) workflow and exceptional flexibility make it the best solution for application tailored to your business requirements. 
-Enjoy being an eCommerce Developer again!
+docker run --rm --interactive --tty \
+  --volume $PWD:/app \
+  composer <command>
 
-Powerful REST API allows for easy integrations and creating unique customer experience on any device.
+e.g
 
-We're using full-stack Behavior-Driven-Development, with [phpspec](http://phpspec.net) and [Behat](http://behat.org)
+docker run --rm --interactive --tty \
+  --volume $PWD:/app \
+  composer install
 
-## Documentation
 
-Documentation is available at [docs.sylius.com](http://docs.sylius.com).
+## How i created this repo
+See main instructions here; https://docs.sylius.com/en/1.12/book/themes/bootstrap-theme.html
 
-## Installation
+1. make empty repo
+2. run docker
+3. docker pull composer
+4. docker run --rm --interactive --tty --volume $PWD:/app composer require sylius/bootstrap-theme
+5. copied all files from vendor/sylius/bootstrap-theme into ./themes/mobio/*
 
-### Traditional
-```bash
-$ wget http://getcomposer.org/composer.phar
-$ php composer.phar create-project sylius/sylius-standard project
-$ cd project
-$ yarn install
-$ yarn build
-$ php bin/console sylius:install
-$ symfony serve
-$ open http://localhost:8000/
-```
+## How we build components
+1. Take figma component
+1. Create it in html , css, javascript where required
+1. Get component to run in story book and review it with mobio - https://github.com/forge-labs-uk/mobio-storybook and once merged see it online at https://forge-labs-uk.github.io/mobio-storybook/?path=/docs/example-button--docs
+1. Once a review is completed you can bring the component into the theme
 
-For more detailed instruction please visit [installation chapter in our docs](https://docs.sylius.com/en/1.10/book/installation/installation.html).
+## How we turn storybook components into sylius theme elements
+1. look at storybook and get the code from storybook for your new component or element
+1. Simply drop static assets into ./themes/mobio/js , and 'media' and 'scss' and modify 'app.js' as you need. 
+1. Open ./themes/mobio/SyliusShopBundle and find the template you're overriding - modify the *.html.twig file with twig, php, html
+1. Save it 
+1. In order to test your changes you might want to run SyliusStandard locally and clone this theme directory into your local install so you can test it works
+1. Once you have things working, commit to a branch and push
+1. Create a merge request on github and ask for a reviewer from @TakesTheBiscuit or @jballzz
+1. We merge
+1. We will release tag the repo
+1. We can then rebuild production store which will pull the theme in and be visible on an environment
 
-### Docker
-
-#### Development
-
-Make sure you have installed [Docker](https://docs.docker.com/get-docker/) on your local machine.
-Execute `docker compose up -d` in your favorite terminal and wait some time until the services will be ready. You might want to see docker logs.
-Then enter `localhost` in your browser or execute `open localhost` in your terminal.
-
-#### Production
-
-The simplest way to deploy your Sylius store via Docker is via `docker-compose.prod.yml` configuration file.
-To do that you need to install [Docker](https://docs.docker.com/get-docker/) on your VPS and define `MYSQL_PASSWORD` environment.
-Then execute `docker compose -f docker-compose.prod.yml up -d` command in your terminal. The `MYSQL_PASSWORD` env will be automatically
-applied to the rest of the config.
-
-> When using a Virtual Private Server (VPS) we recommend having at least 2GB of RAM memory
-
-**Quick deploy:**
-```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-
-export MYSQL_PASSWORD=SLyPJLaye7
-
-docker compose -f docker-compose.prod.yml up -d
-docker compose -f docker-compose.prod.yml exec php bin/console sylius:fixtures:load --no-interaction
-```
-
-## Troubleshooting
-
-If something goes wrong, errors & exceptions are logged at the application level:
-
-```bash
-$ tail -f var/log/prod.log
-$ tail -f var/log/dev.log
-```
-
-## Contributing
-
-Would like to help us and build the most developer-friendly eCommerce framework? Start from reading our [Contribution Guide](https://docs.sylius.com/en/latest/contributing/)!
-
-## Stay Updated
-
-If you want to keep up with the updates, [follow the official Sylius account on Twitter](http://twitter.com/Sylius) and [like us on Facebook](https://www.facebook.com/SyliusEcommerce/).
-
-## Bug Tracking
-
-If you want to report a bug or suggest an idea, please use [GitHub issues](https://github.com/Sylius/Sylius/issues).
-
-## Community Support
-
-Get Sylius support on [Slack](https://sylius.com/slack), [Forum](https://forum.sylius.com/) or [Stack Overflow](https://stackoverflow.com/questions/tagged/sylius).
-
-## MIT License
-
-Sylius is completely free and released under the [MIT License](https://github.com/Sylius/Sylius/blob/master/LICENSE).
-
-## Authors
-
-Sylius was originally created by [Paweł Jędrzejewski](http://pjedrzejewski.com).
-See the list of [contributors from our awesome community](https://github.com/Sylius/Sylius/contributors).
