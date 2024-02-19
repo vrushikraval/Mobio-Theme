@@ -1,0 +1,17 @@
+{
+    "name": "forge-labs-uk/sylius-mobio-theme",
+    "description": "Mobio sylius theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Potter",
+            "email": "prongs@example.com"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "Mobio sylius theme",
+            "parents": [ "sylius/bootstrap-theme" ]
+        }
+    }
+}

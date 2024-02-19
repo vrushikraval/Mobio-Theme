@@ -1,0 +1,27 @@
+<div class="position-relative">
+<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">Hero section title</h1>
+<form class="mx-auto max-w-2xl mb-4">
+        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <div class="relative">
+            <input type="search" id="default-search" class="block ml-2 w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for a product" required>
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+            </div>
+            <button type="submit" class="absolute right-2.5 bottom-4 bg-black hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-white dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><svg class="w-4 h-4 text-white-500 dark:text-white-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg></button>
+        </div>
+    </form>
+
+
+    {% set src = use_webpack ? asset('build/shop/images/homepage-banner.jpg', 'shop') : asset('assets/shop/img/homepage-banner.jpg') %}
+
+    <img class="img-fluid rounded-3 object-fit-cover " style="min-height: 240px" src="{{ src }}" alt="{{ 'sylius.homepage.banner_content'|trans }}">
+
+    <div class="position-absolute top-50 start-0 translate-middle-y py-2 px-4 p-lg-5 w-100">
+        <h1 class="text-white fw-bold w-lg-50 mb-4 pe-lg-5">{{ 'sylius.homepage.banner_content'|trans }}</h1>
+        <a href="#" class="btn btn-light fw-bold">{{ 'sylius.homepage.banner_button'|trans }}</a>
+    </div>
+</div>

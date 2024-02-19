@@ -1,0 +1,16 @@
+<div class="container">
+    <header class="my-4">
+        {# <div class="d-flex align-items-center justify-content-between gap-2"> #}
+            {# {{ sylius_template_event('sylius.shop.layout.header.grid') }} #}
+            {% block content %}
+                {% include "@SyliusShop/Layout/Header/_content.html.twig" %}
+            {% endblock %}
+            {% block primary %}
+                {% include "@SyliusShop/Layout/Header/_primary.html.twig" %}
+            {% endblock %}
+            {% block secondary %}
+                {% include "@SyliusShop/Layout/Header/_secondary.html.twig" %}
+            {% endblock %}
+        {# </div> #}
+    </header>
+</div>

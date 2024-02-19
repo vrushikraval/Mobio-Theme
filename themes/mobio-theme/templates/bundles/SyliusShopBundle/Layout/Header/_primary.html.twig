@@ -1,0 +1,136 @@
+
+<header class="text-gray-600 body-font container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
+
+        <div class="col-2">
+            {% block logo %}
+                {% include "@SyliusShop/Layout/Header/_logo.html.twig" %}
+            {% endblock %}
+        </div>
+
+        <div class="col-4">
+            <form class="flex items-center">   
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for a product" required>
+                </div>
+                <button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-black rounded-lg border border-block hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="col-6">
+            <nav class="mx-auto flex flex-wrap items-center text-base justify-end">
+                <a style="display: flex; align-items: center; background-color: #f2f2f2; padding: 10px; text-decoration: none; color: black; border-radius: 8px; margin-right: 15px;">
+                  <p style="margin: 0;">Next Day Delivery</p>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin: 0 5px;">
+                      <path d="M5.99996 5.54175V7.87508L7.45829 8.75008M5.99996 2.91675C3.26155 2.91675 1.04163 5.13667 1.04163 7.87508C1.04163 10.6135 3.26155 12.8334 5.99996 12.8334C8.73837 12.8334 10.9583 10.6135 10.9583 7.87508C10.9583 5.13667 8.73837 2.91675 5.99996 2.91675ZM5.99996 2.91675V1.16675M4.83329 1.16675H7.16663M10.8585 3.26211L9.98353 2.38711L10.421 2.82461M1.14139 3.26211L2.01639 2.38711L1.57889 2.82461" stroke="black" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <div style="background-color: #EAECF0;">
+                  <p style="margin-right: 5px;">08:03:18</p>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </a>
+
+                <a class="mr-5 hover:text-gray-900">Chris Z</a>
+                <a class="mr-5 hover:text-gray-900"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.3163 18.4384C4.92462 17.0052 6.34492 16 8 16H14C15.6551 16 17.0754 17.0052 17.6837 18.4384M15 8.5C15 10.7091 13.2091 12.5 11 12.5C8.79086 12.5 7 10.7091 7 8.5C7 6.29086 8.79086 4.5 11 4.5C13.2091 4.5 15 6.29086 15 8.5ZM21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </a>
+               {% block cart %}
+                    {% include "@SyliusShop/Layout/Header/_cart.html.twig" %}
+                {% endblock %}
+            </nav>
+        </div>
+
+        <nav class="flex flex-wrap items-center text-base justify-center mt-4 space-x-8" id="myNavbar">
+            <a href="/apple" class="hover:text-gray-900 menu-link" id="appleLink">Apple</a>
+            <a href="#" class="hover:text-gray-900 menu-link" id="samsungLink">Samsung</a>
+            <a href="#" class="hover:text-gray-900 menu-link" id="huaweiLink">Huawei</a>
+            <a href="#" class="hover:text-gray-900 menu-link" id="otherPartsLink">Other Parts</a>
+            <a href="#" class="hover:text-gray-900 menu-link" id="consolesLink">Consoles</a>
+        </nav>
+</header>
+
+{% include '@SyliusShop/Layout/Header/_primary_megamenu.html.twig' %}
+
+<script>
+    function toggleActive(button) {
+        // Get all buttons
+        const buttons = document.querySelectorAll('.custom-button');
+
+        // Loop through each button
+        buttons.forEach((btn) => {
+            // Set bg-gray-100 for all buttons
+            btn.classList.remove('bg-gray-200');
+            btn.classList.add('bg-gray-50');
+        });
+
+        // Set bg-gray-300 only for the clicked button
+        button.classList.remove('bg-gray-50');
+        button.classList.add('bg-gray-200');
+    }
+
+    // Get all the menu links
+    const menuLinks = document.querySelectorAll('.menu-link');
+    const appleMegaMenu = document.getElementById('mega-menu-apple-dropdown');
+    const samsungMegaMenu = document.getElementById('mega-menu-samsung-dropdown');
+
+    // Function to show mega menu
+    function showMegaMenu(menu) {
+        menu.classList.remove('hidden');
+    }
+
+    // Function to hide mega menu
+    function hideMegaMenu(menu) {
+        menu.classList.add('hidden');
+    }
+
+// Loop through each link and add a mouseenter event listener
+menuLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        // Add the 'active' class on mouse enter
+        this.classList.add('active');
+        
+        // Show the corresponding mega menu
+        if (this.id === 'appleLink') {
+            showMegaMenu(appleMegaMenu);
+        } else if (this.id === 'samsungLink') {
+            showMegaMenu(samsungMegaMenu);
+        }
+    });
+
+    // Add a mouseleave event listener to hide the mega menu when mouse leaves the navigation area
+    link.addEventListener('mouseleave', function() {
+        // Remove the 'active' class on mouse leave
+        this.classList.remove('active');
+        
+        // Hide all mega menus
+        hideMegaMenu(appleMegaMenu);
+        hideMegaMenu(samsungMegaMenu);
+    });
+});
+
+</script>
+
+<style>
+#simple-search::placeholder {
+  padding-left: 30px; 
+}
+
+.menu-link.active {
+    color: #333; /* Change to your desired active color */
+    font-weight: bold; /* Add any styling you want for active link */
+    border-bottom: 2px solid black;
+}
+</style>

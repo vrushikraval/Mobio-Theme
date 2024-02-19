@@ -1,0 +1,58 @@
+<nav class="md:ml-auto flex flex-wrap items-center text-base space-x-8 text-gray-500 " style="background-color: #F9FAFB; font-size: 14px; padding: 10px 0 10px 5px;">
+    <a class="hover:text-gray-900 secondary-menu-link ml-6" id="iphonescreens">iPhone Screens</a>
+    <a class="hover:text-gray-900 secondary-menu-link" id="batteries">Batteries</a>
+    <a class="hover:text-gray-900 secondary-menu-link" id="accessories">Accessories & Tools</a>
+    <a class="hover:text-gray-900 secondary-menu-link" id="refurbishing">Refurbishing</a> 
+</nav>
+
+{% include '@SyliusShop/Layout/Header/_secondary_megamenu.html.twig' %}
+
+<nav class="md:ml-auto mt-4 flex flex-wrap items-center text-base justify-center space-x-8" style="background-color: #F2F4F7; font-size: 15px;"><b>Free shipping</b>&nbsp;on orders over £200</nav> 
+
+
+<script>
+    // Get all the secondary menu links
+const secondaryMenuLinks = document.querySelectorAll('.secondary-menu-link');
+const iphonescreensMenu = document.getElementById('mega-menu-iphonescreens-dropdown');
+
+// Function to show mega menu
+function showMegaMenu(menu) {
+    menu.classList.remove('hidden');
+}
+
+// Function to hide mega menu
+function hideMegaMenu(menu) {
+    menu.classList.add('hidden');
+}
+
+// Loop through each link and add a mouseenter event listener
+secondaryMenuLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        // Add the 'active' class on mouse enter
+        this.classList.add('active');
+        
+        // Show the corresponding mega menu
+        if (this.id === 'iphonescreens') {
+            showMegaMenu(iphonescreensMenu);
+        }
+    });
+
+    // Add a mouseleave event listener to hide the mega menu when mouse leaves the navigation area
+    link.addEventListener('mouseleave', function() {
+        // Remove the 'active' class on mouse leave
+        this.classList.remove('active');
+        
+        // Hide the mega menu
+        hideMegaMenu(iphonescreensMenu);
+    });
+});
+
+</script>
+
+<style>
+.secondary-menu-link.active {
+    color: #333; /* Change to your desired active color */
+    font-weight: 500; /* Add any styling you want for active link */
+    border-bottom: 1px solid black;
+}
+</style>

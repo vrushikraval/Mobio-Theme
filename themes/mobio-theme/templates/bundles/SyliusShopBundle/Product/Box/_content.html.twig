@@ -1,0 +1,56 @@
+{% import "@SyliusShop/Common/Macro/money.html.twig" as money %}
+
+<div class="card card-product position-relative {{ role|default('') }}" {{ sylius_test_html_attribute('product') }}>
+    <a href="{{ path('sylius_shop_product_show', {'slug': product.slug, '_locale': product.translation.locale}) }}">
+        {% include '@SyliusShop/Product/_mainImage.html.twig' with {'product': product, 'class': 'card-img-top border border-light bg-light'} %}
+    </a>
+
+    <div class="card-body" {{ sylius_test_html_attribute('product-content') }}>
+        <div class="row gap-2">
+             <div class="col-3 d-flex align-items-center bg-gray-200">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 5.33333V3.33333H2.66668V5.33333H13.3333ZM13.3333 6.66667H2.66668V12.6667H13.3333V6.66667ZM2.00001 2H14C14.1768 2 14.3464 2.07024 14.4714 2.19526C14.5964 2.32029 14.6667 2.48986 14.6667 2.66667V13.3333C14.6667 13.5101 14.5964 13.6797 14.4714 13.8047C14.3464 13.9298 14.1768 14 14 14H2.00001C1.8232 14 1.65363 13.9298 1.52861 13.8047C1.40358 13.6797 1.33334 13.5101 1.33334 13.3333V2.66667C1.33334 2.48986 1.40358 2.32029 1.52861 2.19526C1.65363 2.07024 1.8232 2 2.00001 2ZM7.33334 9.33333H11.3333V10.6667H4.33334L7.33334 7.66667V9.33333Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm">Saver</p>
+            </div>
+             <div class="col d-flex align-items-center bg-gray-200 ">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.64201 1.9555C3.85172 0.907276 5.39933 0.33127 7.00001 0.333503C10.682 0.333503 13.6667 3.31817 13.6667 7.00017C13.6667 8.42417 13.22 9.74417 12.46 10.8268L10.3333 7.00017H12.3333C12.3334 5.95458 12.0262 4.93204 11.4498 4.05967C10.8734 3.18731 10.0533 2.50361 9.09146 2.09359C8.12963 1.68356 7.06849 1.5653 6.03998 1.75351C5.01148 1.94173 4.06098 2.4281 3.30668 3.15217L2.64201 1.9555ZM11.358 12.0448C10.1483 13.0931 8.60069 13.6691 7.00001 13.6668C3.31801 13.6668 0.333344 10.6822 0.333344 7.00017C0.333344 5.57617 0.78001 4.25617 1.54001 3.1735L3.66668 7.00017H1.66668C1.66659 8.04575 1.97385 9.0683 2.55023 9.94066C3.12662 10.813 3.94672 11.4967 4.90856 11.9068C5.87039 12.3168 6.93153 12.435 7.96004 12.2468C8.98854 12.0586 9.93904 11.5722 10.6933 10.8482L11.358 12.0448Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm mt-2 mb-2">IC Swappable</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <h5 class="sylius-product-name card-title mt-2 text-2xl font-extrabold" {{ sylius_test_html_attribute('product-name', product.name) }}>
+            <a href="{{ path('sylius_shop_product_show', {'slug': product.slug, '_locale': product.translation.locale}) }}">
+                {{ product.name }}
+            </a>
+        </h5>
+
+        {% if not product.enabledVariants.empty() %}
+            {% set variant = product|sylius_resolve_variant %}
+            {% set price = money.calculatePrice(variant) %}
+            {% set original_price = money.calculate_original_price(variant) %}
+            {% set applied_promotions = variant.getappliedPromotionsForChannel(sylius.channel) %}
+
+            {% if applied_promotions %}
+                <div class="position-absolute top-0 start-0 p-2 ">
+                    {% include '@SyliusShop/Product/Show/_catalogPromotionLabels.html.twig' with {'applied_promotions': applied_promotions, 'withDescription': false} %}
+                </div>
+            {% endif %}
+
+            <div class="d-flex align-items-baseline flex-wrap gap-2 text-xl font-extrabold">
+
+                <span class="card-subtitle fw-medium sylius-product-price" {{ sylius_test_html_attribute('product-price') }}>{{ price }}</span>
+
+                {% if variant|sylius_has_discount({'channel': sylius.channel}) %}
+                    <span class="small card-subtitle mx-2 sylius-product-original-price" {{ sylius_test_html_attribute('product-original-price') }}>
+                        <del>{{ original_price }}</del>
+                    </span>
+                {% endif %}
+            </div>
+
+        {% endif %}
+
+    </div>
+</div>
