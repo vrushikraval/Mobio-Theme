@@ -1,0 +1,227 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+	    <div class="bg-light rounded-3 text-center">
+	    	<div class="raw flex ">
+	    	<div class="col-1"></div>
+		    	<div class="flex items-center mt-5 mb-5">
+				    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				        <path d="M1.5 5.28289C1.5 4.99571 1.5 4.85213 1.53701 4.71989C1.5698 4.60276 1.62368 4.49259 1.69601 4.39479C1.77767 4.28439 1.89101 4.19624 2.1177 4.01993L5.50885 1.38237C5.68451 1.24574 5.77234 1.17743 5.86933 1.15117C5.9549 1.128 6.0451 1.128 6.13067 1.15117C6.22766 1.17743 6.31549 1.24574 6.49115 1.38237L9.88231 4.01993C10.109 4.19624 10.2223 4.28439 10.304 4.39479C10.3763 4.49259 10.4302 4.60276 10.463 4.71989C10.5 4.85213 10.5 4.99571 10.5 5.28289V8.90036C10.5 9.46041 10.5 9.74044 10.391 9.95435C10.2951 10.1425 10.1422 10.2955 9.95399 10.3914C9.74008 10.5004 9.46005 10.5004 8.9 10.5004H3.1C2.53995 10.5004 2.25992 10.5004 2.04601 10.3914C1.85785 10.2955 1.70487 10.1425 1.60899 9.95435C1.5 9.74044 1.5 9.46041 1.5 8.90036V5.28289Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				    </svg>
+				    <p class="ml-2">Home</p>
+				    <i class="ml-2 fa-solid fa-greater-than" style="font-size: 10px;"></i>
+				    <p class="ml-2 text-gray-500">Apple</p>
+				</div>
+			</div>
+
+	    	<div class="flex flex-col md:flex-row">
+			    <div class="md:w-1/2 flex items-center justify-center mb-5">
+			        <div class="max-w-lg text-left">
+			            <h1 class="text-3xl text-gray-600 font-bold">Apple</h1>
+			            <p class="mt-1">Short category specific description. In justo dui sed gravida tortor nec turpis sed. Convallis suspendisse aliquam semper odio.</p>
+			        </div>
+			    </div>
+			    <div class="md:w-1/2 flex items-center justify-center mb-5">
+			        <svg width="55" height="68" viewBox="0 0 55 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+			            <path d="M28.0202 19.6658C25.3922 19.6658 21.3241 16.6778 17.0401 16.7858C11.3881 16.8578 6.20413 20.0618 3.28813 25.1378C-2.57987 35.3259 1.77613 50.3739 7.50013 58.6539C10.3081 62.6859 13.6201 67.2219 18.0121 67.0779C22.2241 66.8979 23.8082 64.3419 28.9202 64.3419C33.9962 64.3419 35.4362 67.0779 39.9002 66.9699C44.4362 66.8979 47.3162 62.8659 50.0882 58.7979C53.2922 54.1179 54.6242 49.5819 54.6962 49.3299C54.5882 49.2939 45.8762 45.9459 45.7682 35.8659C45.6962 27.4418 52.6442 23.4098 52.9682 23.2298C49.0082 17.4338 42.9242 16.7858 40.8002 16.6418C35.2562 16.2098 30.6122 19.6658 28.0202 19.6658ZM37.3802 11.1698C39.7202 8.36182 41.2682 4.43782 40.8362 0.549805C37.4882 0.693805 33.4562 2.78182 31.0442 5.58982C28.8842 8.07382 27.0122 12.0698 27.5162 15.8858C31.2242 16.1738 35.0402 13.9778 37.3802 11.1698Z" fill="#98A2B3"/>
+			        </svg>
+			    </div>
+			</div>
+	    </div>
+	    {% include "@SyliusShop/Categories/_apple_products.html.twig" %}
+
+
+
+{# <section class="text-gray-600 body-font">
+  <div class="container px-5 mx-auto">
+    	<div class="flex items-center justify-between text-black text-3xl mb-3 ml-2 mr-2">
+		    <div>Most popular</div>
+		    <div>< ></div>
+		</div>
+
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+          <p class="mt-1">$16.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+          <p class="mt-1">$21.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+          <p class="mt-1">$18.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> #}
+
+<div class="container mx-auto">
+<div class="text-3xl font-bold px-5 mb-4">
+  Most popular
+</div>
+  <div class="overflow-x-auto px-5 mx-auto flex flex-nowrap space-x-4 mb-5">
+    <div class="w-1/4 flex-none ">
+      <div class="bg-white rounded-lg shadow-md mb-4">
+        <!-- Product 1 -->
+        <img alt="Product 1" class="object-cover object-center w-full h-48 mb-4" src="https://dummyimage.com/423x263">
+        <div class="row gap-2">
+             <div class="col-3 d-flex align-items-center bg-gray-200 ml-5">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 5.33333V3.33333H2.66668V5.33333H13.3333ZM13.3333 6.66667H2.66668V12.6667H13.3333V6.66667ZM2.00001 2H14C14.1768 2 14.3464 2.07024 14.4714 2.19526C14.5964 2.32029 14.6667 2.48986 14.6667 2.66667V13.3333C14.6667 13.5101 14.5964 13.6797 14.4714 13.8047C14.3464 13.9298 14.1768 14 14 14H2.00001C1.8232 14 1.65363 13.9298 1.52861 13.8047C1.40358 13.6797 1.33334 13.5101 1.33334 13.3333V2.66667C1.33334 2.48986 1.40358 2.32029 1.52861 2.19526C1.65363 2.07024 1.8232 2 2.00001 2ZM7.33334 9.33333H11.3333V10.6667H4.33334L7.33334 7.66667V9.33333Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm">Saver</p>
+            </div>
+             <div class="col d-flex align-items-center bg-gray-200">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.64201 1.9555C3.85172 0.907276 5.39933 0.33127 7.00001 0.333503C10.682 0.333503 13.6667 3.31817 13.6667 7.00017C13.6667 8.42417 13.22 9.74417 12.46 10.8268L10.3333 7.00017H12.3333C12.3334 5.95458 12.0262 4.93204 11.4498 4.05967C10.8734 3.18731 10.0533 2.50361 9.09146 2.09359C8.12963 1.68356 7.06849 1.5653 6.03998 1.75351C5.01148 1.94173 4.06098 2.4281 3.30668 3.15217L2.64201 1.9555ZM11.358 12.0448C10.1483 13.0931 8.60069 13.6691 7.00001 13.6668C3.31801 13.6668 0.333344 10.6822 0.333344 7.00017C0.333344 5.57617 0.78001 4.25617 1.54001 3.1735L3.66668 7.00017H1.66668C1.66659 8.04575 1.97385 9.0683 2.55023 9.94066C3.12662 10.813 3.94672 11.4967 4.90856 11.9068C5.87039 12.3168 6.93153 12.435 7.96004 12.2468C8.98854 12.0586 9.93904 11.5722 10.6933 10.8482L11.358 12.0448Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm mt-2 mb-2">IC Swappable</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <h2 class="text-lg font-semibold mb-1 ml-2 mt-3">Product Name</h2>
+        <p class="text-gray-700 ml-2">£290.77</p>
+      </div>
+    </div>
+    <div class="w-1/4 flex-none">
+      <div class="bg-white rounded-lg shadow-md">
+        <!-- Product 1 -->
+        <img alt="Product 1" class="object-cover object-center w-full h-48 mb-4" src="https://dummyimage.com/423x263">
+        <div class="row gap-2">
+             <div class="col-3 d-flex align-items-center bg-gray-200 ml-5">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 5.33333V3.33333H2.66668V5.33333H13.3333ZM13.3333 6.66667H2.66668V12.6667H13.3333V6.66667ZM2.00001 2H14C14.1768 2 14.3464 2.07024 14.4714 2.19526C14.5964 2.32029 14.6667 2.48986 14.6667 2.66667V13.3333C14.6667 13.5101 14.5964 13.6797 14.4714 13.8047C14.3464 13.9298 14.1768 14 14 14H2.00001C1.8232 14 1.65363 13.9298 1.52861 13.8047C1.40358 13.6797 1.33334 13.5101 1.33334 13.3333V2.66667C1.33334 2.48986 1.40358 2.32029 1.52861 2.19526C1.65363 2.07024 1.8232 2 2.00001 2ZM7.33334 9.33333H11.3333V10.6667H4.33334L7.33334 7.66667V9.33333Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm">Saver</p>
+            </div>
+             <div class="col d-flex align-items-center bg-gray-200 ">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.64201 1.9555C3.85172 0.907276 5.39933 0.33127 7.00001 0.333503C10.682 0.333503 13.6667 3.31817 13.6667 7.00017C13.6667 8.42417 13.22 9.74417 12.46 10.8268L10.3333 7.00017H12.3333C12.3334 5.95458 12.0262 4.93204 11.4498 4.05967C10.8734 3.18731 10.0533 2.50361 9.09146 2.09359C8.12963 1.68356 7.06849 1.5653 6.03998 1.75351C5.01148 1.94173 4.06098 2.4281 3.30668 3.15217L2.64201 1.9555ZM11.358 12.0448C10.1483 13.0931 8.60069 13.6691 7.00001 13.6668C3.31801 13.6668 0.333344 10.6822 0.333344 7.00017C0.333344 5.57617 0.78001 4.25617 1.54001 3.1735L3.66668 7.00017H1.66668C1.66659 8.04575 1.97385 9.0683 2.55023 9.94066C3.12662 10.813 3.94672 11.4967 4.90856 11.9068C5.87039 12.3168 6.93153 12.435 7.96004 12.2468C8.98854 12.0586 9.93904 11.5722 10.6933 10.8482L11.358 12.0448Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm mt-2 mb-2">IC Swappable</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <h2 class="text-lg font-semibold mb-1 ml-2 mt-3">Product 1</h2>
+        <p class="text-gray-700 ml-2">£290.77</p>
+      </div>
+    </div>
+    <div class="w-1/4 flex-none">
+      <div class="bg-white rounded-lg shadow-md">
+        <!-- Product 1 -->
+        <img alt="Product 1" class="object-cover object-center w-full h-48 mb-4" src="https://dummyimage.com/423x263">
+        <div class="row gap-2">
+             <div class="col-3 d-flex align-items-center bg-gray-200 ml-5">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 5.33333V3.33333H2.66668V5.33333H13.3333ZM13.3333 6.66667H2.66668V12.6667H13.3333V6.66667ZM2.00001 2H14C14.1768 2 14.3464 2.07024 14.4714 2.19526C14.5964 2.32029 14.6667 2.48986 14.6667 2.66667V13.3333C14.6667 13.5101 14.5964 13.6797 14.4714 13.8047C14.3464 13.9298 14.1768 14 14 14H2.00001C1.8232 14 1.65363 13.9298 1.52861 13.8047C1.40358 13.6797 1.33334 13.5101 1.33334 13.3333V2.66667C1.33334 2.48986 1.40358 2.32029 1.52861 2.19526C1.65363 2.07024 1.8232 2 2.00001 2ZM7.33334 9.33333H11.3333V10.6667H4.33334L7.33334 7.66667V9.33333Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm">Saver</p>
+            </div>
+             <div class="col d-flex align-items-center bg-gray-200 ">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.64201 1.9555C3.85172 0.907276 5.39933 0.33127 7.00001 0.333503C10.682 0.333503 13.6667 3.31817 13.6667 7.00017C13.6667 8.42417 13.22 9.74417 12.46 10.8268L10.3333 7.00017H12.3333C12.3334 5.95458 12.0262 4.93204 11.4498 4.05967C10.8734 3.18731 10.0533 2.50361 9.09146 2.09359C8.12963 1.68356 7.06849 1.5653 6.03998 1.75351C5.01148 1.94173 4.06098 2.4281 3.30668 3.15217L2.64201 1.9555ZM11.358 12.0448C10.1483 13.0931 8.60069 13.6691 7.00001 13.6668C3.31801 13.6668 0.333344 10.6822 0.333344 7.00017C0.333344 5.57617 0.78001 4.25617 1.54001 3.1735L3.66668 7.00017H1.66668C1.66659 8.04575 1.97385 9.0683 2.55023 9.94066C3.12662 10.813 3.94672 11.4967 4.90856 11.9068C5.87039 12.3168 6.93153 12.435 7.96004 12.2468C8.98854 12.0586 9.93904 11.5722 10.6933 10.8482L11.358 12.0448Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm mt-2 mb-2">IC Swappable</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <h2 class="text-lg font-semibold mb-1 ml-2 mt-3">Product 1</h2>
+        <p class="text-gray-700 ml-2">£290.77</p>
+      </div>
+    </div>
+    <div class="w-1/4 flex-none">
+      <div class="bg-white rounded-lg shadow-md">
+        <!-- Product 1 -->
+        <img alt="Product 1" class="object-cover object-center w-full h-48 mb-4" src="https://dummyimage.com/423x263">
+        <div class="row gap-2">
+             <div class="col-3 d-flex align-items-center bg-gray-200 ml-5">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 5.33333V3.33333H2.66668V5.33333H13.3333ZM13.3333 6.66667H2.66668V12.6667H13.3333V6.66667ZM2.00001 2H14C14.1768 2 14.3464 2.07024 14.4714 2.19526C14.5964 2.32029 14.6667 2.48986 14.6667 2.66667V13.3333C14.6667 13.5101 14.5964 13.6797 14.4714 13.8047C14.3464 13.9298 14.1768 14 14 14H2.00001C1.8232 14 1.65363 13.9298 1.52861 13.8047C1.40358 13.6797 1.33334 13.5101 1.33334 13.3333V2.66667C1.33334 2.48986 1.40358 2.32029 1.52861 2.19526C1.65363 2.07024 1.8232 2 2.00001 2ZM7.33334 9.33333H11.3333V10.6667H4.33334L7.33334 7.66667V9.33333Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm">Saver</p>
+            </div>
+             <div class="col d-flex align-items-center bg-gray-200 ">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.64201 1.9555C3.85172 0.907276 5.39933 0.33127 7.00001 0.333503C10.682 0.333503 13.6667 3.31817 13.6667 7.00017C13.6667 8.42417 13.22 9.74417 12.46 10.8268L10.3333 7.00017H12.3333C12.3334 5.95458 12.0262 4.93204 11.4498 4.05967C10.8734 3.18731 10.0533 2.50361 9.09146 2.09359C8.12963 1.68356 7.06849 1.5653 6.03998 1.75351C5.01148 1.94173 4.06098 2.4281 3.30668 3.15217L2.64201 1.9555ZM11.358 12.0448C10.1483 13.0931 8.60069 13.6691 7.00001 13.6668C3.31801 13.6668 0.333344 10.6822 0.333344 7.00017C0.333344 5.57617 0.78001 4.25617 1.54001 3.1735L3.66668 7.00017H1.66668C1.66659 8.04575 1.97385 9.0683 2.55023 9.94066C3.12662 10.813 3.94672 11.4967 4.90856 11.9068C5.87039 12.3168 6.93153 12.435 7.96004 12.2468C8.98854 12.0586 9.93904 11.5722 10.6933 10.8482L11.358 12.0448Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm mt-2 mb-2">IC Swappable</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <h2 class="text-lg font-semibold mb-1 ml-2 mt-3">Product 1</h2>
+        <p class="text-gray-700 ml-2">£290.77</p>
+      </div>
+    </div>
+    <div class="w-1/4 flex-none">
+      <div class="bg-white rounded-lg shadow-md">
+        <!-- Product 1 -->
+        <img alt="Product 1" class="object-cover object-center w-full h-48 mb-4" src="https://dummyimage.com/423x263">
+        <div class="row gap-2">
+             <div class="col-3 d-flex align-items-center bg-gray-200 ml-5">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 5.33333V3.33333H2.66668V5.33333H13.3333ZM13.3333 6.66667H2.66668V12.6667H13.3333V6.66667ZM2.00001 2H14C14.1768 2 14.3464 2.07024 14.4714 2.19526C14.5964 2.32029 14.6667 2.48986 14.6667 2.66667V13.3333C14.6667 13.5101 14.5964 13.6797 14.4714 13.8047C14.3464 13.9298 14.1768 14 14 14H2.00001C1.8232 14 1.65363 13.9298 1.52861 13.8047C1.40358 13.6797 1.33334 13.5101 1.33334 13.3333V2.66667C1.33334 2.48986 1.40358 2.32029 1.52861 2.19526C1.65363 2.07024 1.8232 2 2.00001 2ZM7.33334 9.33333H11.3333V10.6667H4.33334L7.33334 7.66667V9.33333Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm">Saver</p>
+            </div>
+             <div class="col d-flex align-items-center bg-gray-200 ">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.64201 1.9555C3.85172 0.907276 5.39933 0.33127 7.00001 0.333503C10.682 0.333503 13.6667 3.31817 13.6667 7.00017C13.6667 8.42417 13.22 9.74417 12.46 10.8268L10.3333 7.00017H12.3333C12.3334 5.95458 12.0262 4.93204 11.4498 4.05967C10.8734 3.18731 10.0533 2.50361 9.09146 2.09359C8.12963 1.68356 7.06849 1.5653 6.03998 1.75351C5.01148 1.94173 4.06098 2.4281 3.30668 3.15217L2.64201 1.9555ZM11.358 12.0448C10.1483 13.0931 8.60069 13.6691 7.00001 13.6668C3.31801 13.6668 0.333344 10.6822 0.333344 7.00017C0.333344 5.57617 0.78001 4.25617 1.54001 3.1735L3.66668 7.00017H1.66668C1.66659 8.04575 1.97385 9.0683 2.55023 9.94066C3.12662 10.813 3.94672 11.4967 4.90856 11.9068C5.87039 12.3168 6.93153 12.435 7.96004 12.2468C8.98854 12.0586 9.93904 11.5722 10.6933 10.8482L11.358 12.0448Z" fill="black"/>
+                </svg>
+                <p class="ml-2 text-sm mt-2 mb-2">IC Swappable</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <h2 class="text-lg font-semibold mb-1 ml-2 mt-3">Product 1</h2>
+        <p class="text-gray-700 ml-2">£290.77</p>
+      </div>
+    </div>
+    <!-- Repeat this block for each additional product -->
+  </div>
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+	    {% include "@SyliusShop/Homepage/_contactUs.html.twig" %}
+
+
+
+
+    {# Check if the activeButton parameter is set to 'apple' #}
+    {% if app.request.query.get('activeButton') == 'apple' %}
+        {# Apply the 'active' class to the button #}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById('appleLink').classList.add('active');
+            });
+        </script>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,53 @@
+{# Product banner  #}
+<section class="text-gray-600 body-font">
+  <div class="container px-5 mx-auto flex flex-col">
+    <div class="lg:w-6/6 mx-auto relative">
+      <!-- Image -->
+      <div class="rounded-lg overflow-hidden">
+         {% set src = use_webpack ? asset('build/shop/images/homepage-banner.jpg', 'shop') : asset('assets/shop/img/homepage-banner.jpg') %}
+
+    <img class="img-fluid rounded-3 object-fit-cover " style="min-height: 240px" src="{{ src }}" alt="{{ 'sylius.homepage.banner_content'|trans }}">
+      </div>
+
+       <!-- Text Overlay -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center">
+          <div class="text-center">
+            <h2 class="text-4xl text-white font-extrabold title-font mb-2 mt-5">Product banner title</h2>
+            <p class="leading-relaxed text-white">Lectus elementum lacus vel cursus convallis et eget nec. Ac luctus dui nisi sagittis ornare turpis volutpat habitant.</p>
+            <div> 
+              <button class="mt-3 inline-block text-white bg-black border border-transparent px-4 py-2 text-base font-medium rounded-md transition-colors duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                O Button text O
+              </button>
+            </div>
+          </div>
+        </div> 
+    </div>
+  </div>
+</section>
+
+{# List products #}
+<section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 md:flex-row flex-col gap-5 justify-center mt-5">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative">
+            <img class="w-full h-full object-cover object-center rounded" alt="hero" src="https://dummyimage.com/384x480">
+            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-center mb-5">
+                <h2 class="text-2xl text-gray-900 font-medium">Product Title </h2>
+                <button class="mt-3 px-4 py-2 bg-gray-900 text-white rounded">Shop Products</button>
+            </div>
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative">
+            <img class="w-full h-full object-cover object-center rounded" alt="hero" src="https://dummyimage.com/384x480">
+            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-center mb-5">
+                <h2 class="text-2xl text-gray-900 font-medium">Product Title</h2>
+                <button class="mt-3 px-4 py-2 bg-gray-900 text-white rounded">Shop Products</button>
+            </div>
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative">
+            <img class="w-full h-full object-cover object-center rounded" alt="hero" src="https://dummyimage.com/384x480">
+            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 text-center mb-5">
+                <h2 class="text-2xl text-gray-900 font-medium">Product Title</h2>
+                <button class="mt-3 px-4 py-2 bg-gray-900 text-white rounded">Shop Products</button>
+            </div>
+        </div>
+    </div>
+</section>

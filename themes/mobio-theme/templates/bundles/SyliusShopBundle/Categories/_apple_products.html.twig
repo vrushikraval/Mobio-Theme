@@ -1,0 +1,73 @@
+{# Product banner  #}
+<section class="text-gray-600 body-font mt-5">
+  <div class="container px-5 mx-auto flex flex-col">
+    <div class="lg:w-6/6 mx-auto relative">
+      <!-- Image -->
+      <div class=" overflow-hidden">
+         {% set src = use_webpack ? asset('build/shop/images/homepage-banner.jpg', 'shop') : asset('assets/shop/img/homepage-banner.jpg') %}
+
+    <img class="img-fluid  object-fit-cover " style="min-height: 240px" src="{{ src }}" alt="{{ 'sylius.homepage.banner_content'|trans }}">
+      </div>
+
+       <!-- Text Overlay -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center">
+          <div class="text-center">
+            <h2 class="text-4xl text-white font-extrabold title-font mb-2 mt-5">New Product Promo</h2>
+            <p class="leading-relaxed text-white">Lectus elementum lacus vel cursus convallis et eget nec. Ac luctus dui nisi sagittis ornare turpis volutpat habitant.</p>
+            <div> 
+              <button class="mt-3 inline-block text-white bg-black border border-transparent px-4 py-2 text-base font-medium rounded-md transition-colors duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+               Button text
+              </button>
+            </div>
+          </div>
+        </div> 
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <!-- First Box -->
+   <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4">
+      <div class="bg-gray-200 h-96 p-6 rounded-lg flex flex-col justify-center items-center">
+         <svg width="60" height="54" viewBox="0 0 60 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.39223 50.2744L26.983 32.6837C28.039 31.6276 28.5671 31.0996 29.1759 30.9018C29.7115 30.7277 30.2884 30.7277 30.824 30.9018C31.4329 31.0996 31.9609 31.6276 33.017 32.6837L50.4904 50.1571M35.3333 35L42.983 27.3503C44.039 26.2943 44.5671 25.7663 45.1759 25.5684C45.7115 25.3944 46.2884 25.3944 46.824 25.5684C47.4329 25.7663 47.9609 26.2943 49.017 27.3503L56.6666 35M24.6666 19C24.6666 21.9455 22.2788 24.3333 19.3333 24.3333C16.3878 24.3333 14 21.9455 14 19C14 16.0545 16.3878 13.6667 19.3333 13.6667C22.2788 13.6667 24.6666 16.0545 24.6666 19ZM16.1333 51H43.8666C48.3471 51 50.5873 51 52.2986 50.1281C53.8039 49.3611 55.0277 48.1372 55.7947 46.6319C56.6666 44.9206 56.6666 42.6804 56.6666 38.2V15.8C56.6666 11.3196 56.6666 9.07937 55.7947 7.36808C55.0277 5.86278 53.8039 4.63893 52.2986 3.87195C50.5873 3 48.3471 3 43.8666 3H16.1333C11.6529 3 9.41268 3 7.70139 3.87195C6.19609 4.63893 4.97225 5.86278 4.20526 7.36808C3.33331 9.07937 3.33331 11.3196 3.33331 15.8V38.2C3.33331 42.6804 3.33331 44.9206 4.20526 46.6319C4.97225 48.1372 6.19609 49.3611 7.70139 50.1281C9.41268 51 11.6529 51 16.1333 51Z" stroke="#98A2B3" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>
+         <p class="text-center text-black font-extrabold mt-5">iPhone Parts</p>
+         <button class="mt-3 inline-block text-white bg-black border border-transparent px-4 py-2 text-base font-medium rounded-md transition-colors duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Shop Products</button>
+      </div>
+   </div>
+    <!-- Second Box -->
+    <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4">
+      <div class="bg-gray-200 h-96 p-6 rounded-lg flex flex-col justify-center items-center">
+         <svg width="60" height="54" viewBox="0 0 60 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.39223 50.2744L26.983 32.6837C28.039 31.6276 28.5671 31.0996 29.1759 30.9018C29.7115 30.7277 30.2884 30.7277 30.824 30.9018C31.4329 31.0996 31.9609 31.6276 33.017 32.6837L50.4904 50.1571M35.3333 35L42.983 27.3503C44.039 26.2943 44.5671 25.7663 45.1759 25.5684C45.7115 25.3944 46.2884 25.3944 46.824 25.5684C47.4329 25.7663 47.9609 26.2943 49.017 27.3503L56.6666 35M24.6666 19C24.6666 21.9455 22.2788 24.3333 19.3333 24.3333C16.3878 24.3333 14 21.9455 14 19C14 16.0545 16.3878 13.6667 19.3333 13.6667C22.2788 13.6667 24.6666 16.0545 24.6666 19ZM16.1333 51H43.8666C48.3471 51 50.5873 51 52.2986 50.1281C53.8039 49.3611 55.0277 48.1372 55.7947 46.6319C56.6666 44.9206 56.6666 42.6804 56.6666 38.2V15.8C56.6666 11.3196 56.6666 9.07937 55.7947 7.36808C55.0277 5.86278 53.8039 4.63893 52.2986 3.87195C50.5873 3 48.3471 3 43.8666 3H16.1333C11.6529 3 9.41268 3 7.70139 3.87195C6.19609 4.63893 4.97225 5.86278 4.20526 7.36808C3.33331 9.07937 3.33331 11.3196 3.33331 15.8V38.2C3.33331 42.6804 3.33331 44.9206 4.20526 46.6319C4.97225 48.1372 6.19609 49.3611 7.70139 50.1281C9.41268 51 11.6529 51 16.1333 51Z" stroke="#98A2B3" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>
+         <p class="text-center text-black font-extrabold mt-5">iPad Parts</p>
+         <button class="mt-3 inline-block text-white bg-black border border-transparent px-4 py-2 text-base font-medium rounded-md transition-colors duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Shop Products</button>
+      </div>
+   </div>
+    <!-- First Box Under -->
+    <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4 mt-3">
+      <div class="bg-gray-200 h-96 p-6 rounded-lg flex flex-col justify-center items-center">
+         <svg width="60" height="54" viewBox="0 0 60 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.39223 50.2744L26.983 32.6837C28.039 31.6276 28.5671 31.0996 29.1759 30.9018C29.7115 30.7277 30.2884 30.7277 30.824 30.9018C31.4329 31.0996 31.9609 31.6276 33.017 32.6837L50.4904 50.1571M35.3333 35L42.983 27.3503C44.039 26.2943 44.5671 25.7663 45.1759 25.5684C45.7115 25.3944 46.2884 25.3944 46.824 25.5684C47.4329 25.7663 47.9609 26.2943 49.017 27.3503L56.6666 35M24.6666 19C24.6666 21.9455 22.2788 24.3333 19.3333 24.3333C16.3878 24.3333 14 21.9455 14 19C14 16.0545 16.3878 13.6667 19.3333 13.6667C22.2788 13.6667 24.6666 16.0545 24.6666 19ZM16.1333 51H43.8666C48.3471 51 50.5873 51 52.2986 50.1281C53.8039 49.3611 55.0277 48.1372 55.7947 46.6319C56.6666 44.9206 56.6666 42.6804 56.6666 38.2V15.8C56.6666 11.3196 56.6666 9.07937 55.7947 7.36808C55.0277 5.86278 53.8039 4.63893 52.2986 3.87195C50.5873 3 48.3471 3 43.8666 3H16.1333C11.6529 3 9.41268 3 7.70139 3.87195C6.19609 4.63893 4.97225 5.86278 4.20526 7.36808C3.33331 9.07937 3.33331 11.3196 3.33331 15.8V38.2C3.33331 42.6804 3.33331 44.9206 4.20526 46.6319C4.97225 48.1372 6.19609 49.3611 7.70139 50.1281C9.41268 51 11.6529 51 16.1333 51Z" stroke="#98A2B3" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>
+         <p class="text-center text-black font-extrabold mt-5">Apple Watch Parts</p>
+         <button class="mt-3 inline-block text-white bg-black border border-transparent px-4 py-2 text-base font-medium rounded-md transition-colors duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Shop Products</button>
+      </div>
+   </div>
+    <!-- Second Box Under -->
+    <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4 mt-3">
+      <div class="bg-gray-200 h-96 p-6 rounded-lg flex flex-col justify-center items-center">
+         <svg width="60" height="54" viewBox="0 0 60 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.39223 50.2744L26.983 32.6837C28.039 31.6276 28.5671 31.0996 29.1759 30.9018C29.7115 30.7277 30.2884 30.7277 30.824 30.9018C31.4329 31.0996 31.9609 31.6276 33.017 32.6837L50.4904 50.1571M35.3333 35L42.983 27.3503C44.039 26.2943 44.5671 25.7663 45.1759 25.5684C45.7115 25.3944 46.2884 25.3944 46.824 25.5684C47.4329 25.7663 47.9609 26.2943 49.017 27.3503L56.6666 35M24.6666 19C24.6666 21.9455 22.2788 24.3333 19.3333 24.3333C16.3878 24.3333 14 21.9455 14 19C14 16.0545 16.3878 13.6667 19.3333 13.6667C22.2788 13.6667 24.6666 16.0545 24.6666 19ZM16.1333 51H43.8666C48.3471 51 50.5873 51 52.2986 50.1281C53.8039 49.3611 55.0277 48.1372 55.7947 46.6319C56.6666 44.9206 56.6666 42.6804 56.6666 38.2V15.8C56.6666 11.3196 56.6666 9.07937 55.7947 7.36808C55.0277 5.86278 53.8039 4.63893 52.2986 3.87195C50.5873 3 48.3471 3 43.8666 3H16.1333C11.6529 3 9.41268 3 7.70139 3.87195C6.19609 4.63893 4.97225 5.86278 4.20526 7.36808C3.33331 9.07937 3.33331 11.3196 3.33331 15.8V38.2C3.33331 42.6804 3.33331 44.9206 4.20526 46.6319C4.97225 48.1372 6.19609 49.3611 7.70139 50.1281C9.41268 51 11.6529 51 16.1333 51Z" stroke="#98A2B3" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>
+         <p class="text-center text-black font-extrabold mt-5">MacBook Parts</p>
+         <button class="mt-3 inline-block text-white bg-black border border-transparent px-4 py-2 text-base font-medium rounded-md transition-colors duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Shop Products</button>
+      </div>
+   </div>
+  </div>
+</section>
+
+

@@ -1,2 +1,8 @@
 sylius_paypal_webhook:
     resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
+
+apple_page:
+    path: '/apple-page'
+    methods: ['GET']
+    defaults:
+        _controller: 'App\Controller\AppleController::showPage'

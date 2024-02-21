@@ -1,7 +1,48 @@
 {% extends '@SyliusShop/layout.html.twig' %}
 
-{% block content %}
+{# {% block content %}
     <div class="homepage d-flex flex-column gap-5 mb-5">
         {{ sylius_template_event('sylius.shop.homepage') }}
     </div>
+{% endblock %} #}
+
+{% block content %}
+    <div class="homepage d-flex flex-column gap-5 mb-5">
+        {% block banner %}
+            {% include "@SyliusShop/Homepage/_banner.html.twig" %}
+        {% endblock %}
+
+        {% block latest_products %}
+            {% include "@SyliusShop/Homepage/_latestProducts.html.twig" %}
+        {% endblock %}
+
+        {% block latest_products_carousel %}
+            {% include "@SyliusShop/Homepage/_latestProductsCarousel.html.twig" %}
+        {% endblock %}
+
+        {% block newsletter %}
+            {% include "@SyliusShop/Homepage/_newsletter.html.twig" %}
+        {% endblock %}
+
+        {% block products %}
+            {% include "@SyliusShop/Homepage/_products.html.twig" %}
+        {% endblock %}
+
+        {% block who_we_are %}
+            {% include "@SyliusShop/Homepage/_whoWeAre.html.twig" %}
+        {% endblock %}
+
+        {% block contact_us %}
+            {% include "@SyliusShop/Homepage/_contactUs.html.twig" %}
+        {% endblock %}
+
+        {% block products_grid %}
+            {% include "@SyliusShop/Homepage/_productsGrid.html.twig" %}
+        {% endblock %}
+
+        {% block about_us %}
+            {% include "@SyliusShop/Homepage/_aboutUs.html.twig" %}
+        {% endblock %}
+    </div>
 {% endblock %}
+
