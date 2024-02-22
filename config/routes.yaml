@@ -1,2 +1,8 @@
 sylius_paypal_webhook:
     resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
+
+iphone_parts:
+    path: '/apple/iphone_parts'
+    methods: ['GET']
+    defaults:
+        _controller: 'App\Controller\AppleController::showIphoneParts'
