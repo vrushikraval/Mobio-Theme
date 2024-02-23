@@ -1,2 +1,8 @@
 sylius_paypal_webhook:
     resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
+
+iphone_screen:
+    path: '/iphone-screen'
+    methods: ['GET']
+    defaults:
+        _controller: 'App\Controller\iphoneScreenController::showIphoneScreen'
