@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2354173082738a0afe5009d86e8d0fe",
+    "content-hash": "142980e40952d8fe04d7ef7d1a84fc9d",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -15046,16 +15046,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.58",
+            "version": "1.10.62",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "a23518379ec4defd9e47cbf81019526861623ec2"
+                "reference": "cd5c8a1660ed3540b211407c77abf4af193a6af9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a23518379ec4defd9e47cbf81019526861623ec2",
-                "reference": "a23518379ec4defd9e47cbf81019526861623ec2",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/cd5c8a1660ed3540b211407c77abf4af193a6af9",
+                "reference": "cd5c8a1660ed3540b211407c77abf4af193a6af9",
                 "shasum": ""
             },
             "require": {
@@ -15104,7 +15104,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-12T20:02:57+00:00"
+            "time": "2024-03-13T12:27:20+00:00"
         },
         {
             "name": "phpstan/phpstan-doctrine",
@@ -15784,6 +15784,62 @@
                 "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
             },
             "time": "2023-04-10T20:10:41+00:00"
+        },
+        {
+            "name": "rector/rector",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rectorphp/rector.git",
+                "reference": "7596fa6da06c6a20c012efe6bb3d9188a9113b11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/7596fa6da06c6a20c012efe6bb3d9188a9113b11",
+                "reference": "7596fa6da06c6a20c012efe6bb3d9188a9113b11",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0",
+                "phpstan/phpstan": "^1.10.57"
+            },
+            "conflict": {
+                "rector/rector-doctrine": "*",
+                "rector/rector-downgrade-php": "*",
+                "rector/rector-phpunit": "*",
+                "rector/rector-symfony": "*"
+            },
+            "bin": [
+                "bin/rector"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Instant Upgrade and Automated Refactoring of any PHP code",
+            "keywords": [
+                "automation",
+                "dev",
+                "migration",
+                "refactoring"
+            ],
+            "support": {
+                "issues": "https://github.com/rectorphp/rector/issues",
+                "source": "https://github.com/rectorphp/rector/tree/1.0.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-03T12:32:31+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -16767,20 +16823,21 @@
         },
         {
             "name": "sylius/sylius-rector",
-            "version": "v1.0",
+            "version": "v2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusRector.git",
-                "reference": "d323546a847a04500225e7627dabe8163d3b1dc4"
+                "reference": "87c35b2ece88cce7b2c3e11ef6d3e9db60edace9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/SyliusRector/zipball/d323546a847a04500225e7627dabe8163d3b1dc4",
-                "reference": "d323546a847a04500225e7627dabe8163d3b1dc4",
+                "url": "https://api.github.com/repos/Sylius/SyliusRector/zipball/87c35b2ece88cce7b2c3e11ef6d3e9db60edace9",
+                "reference": "87c35b2ece88cce7b2c3e11ef6d3e9db60edace9",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.0"
+                "php": "^8.0",
+                "rector/rector": "^1.0"
             },
             "conflict": {
                 "rector/rector": "<0.11",
@@ -16792,8 +16849,6 @@
                 "phpstan/phpstan-strict-rules": "^1.2",
                 "phpstan/phpstan-webmozart-assert": "^1.1",
                 "phpunit/phpunit": "^9.5",
-                "rector/phpstan-rules": "^0.5",
-                "rector/rector": "dev-main",
                 "symplify/easy-coding-standard": "^10.0|^11.0",
                 "symplify/package-builder": "^10.0",
                 "symplify/phpstan-extensions": "^10.0|^11.0",
@@ -16805,7 +16860,7 @@
             "extra": {
                 "enable-patching": true,
                 "branch-alias": {
-                    "dev-main": "1.0-dev"
+                    "dev-main": "2.0-dev"
                 },
                 "rector": {
                     "includes": [
@@ -16825,9 +16880,9 @@
             "description": "Rector upgrades rules for Sylius",
             "support": {
                 "issues": "https://github.com/Sylius/SyliusRector/issues",
-                "source": "https://github.com/Sylius/SyliusRector/tree/v1.0"
+                "source": "https://github.com/Sylius/SyliusRector/tree/v2.0"
             },
-            "time": "2023-04-21T09:19:11+00:00"
+            "time": "2024-03-12T10:39:41+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -17450,5 +17505,5 @@
         "php": "^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
